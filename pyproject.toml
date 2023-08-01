@@ -15,3 +15,5 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 include = ["src"]
+
+exclude = ["tests", "docs"]
