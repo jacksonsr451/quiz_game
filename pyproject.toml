@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "Quiz Game"
+version = "0.1.0"
+description = "This is a simple quiz game in python with flask"
+authors = ["jacksonsr45 <jackson.severino.rocha@escola.pr.gov.br>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+include = ["src"]
