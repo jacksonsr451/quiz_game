@@ -6,8 +6,10 @@ from src.domain.questions.question import Question
 class Questions:
     __questions_list: list[Question]
 
-    def __init__(self) -> None:
-        self.__questions_list = []
+    def __init__(self, questions: list = []) -> None:
+        self.__questions_list = [
+            question for question in questions
+        ]
 
     def register_a_new_question(
         self,
