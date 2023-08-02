@@ -46,7 +46,8 @@ class TestQuestions(unittest.TestCase):
         correct_answer = 'Option2'
 
         self.questions.register_a_new_question(
-            theme, text, options, correct_answer)
+            theme, text, options, correct_answer
+        )
         question_id = self.questions.get_questions()[0].get_question_id()
 
         self.questions.remove_a_question(question_id)
