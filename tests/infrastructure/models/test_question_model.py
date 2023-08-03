@@ -15,9 +15,7 @@ class TestQuestionModel:
         session.add(question)
         session.commit()
 
-        result = (
-            session.query(QuestionModel).filter_by(id=question.id).first()
-        )
+        result = session.query(QuestionModel).filter_by(id=question.id).first()
 
         assert result is not None
         assert result.id == question.id

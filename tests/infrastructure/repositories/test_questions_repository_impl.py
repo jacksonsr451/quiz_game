@@ -38,7 +38,7 @@ class TestQuestionsRepositoryImpl:
             theme='Theme Test',
             text='This is a test question',
             options='["option1", "option2"]',
-            correct_answer='option1'
+            correct_answer='option1',
         )
         session.add(question)
         session.commit()
@@ -55,14 +55,14 @@ class TestQuestionsRepositoryImpl:
             theme='Theme Test 1',
             text='This is a test question 1',
             options='["option1", "option2"]',
-            correct_answer='option1'
+            correct_answer='option1',
         )
         question2 = QuestionModel(
             id=uuid4().__str__(),
             theme='Theme Test 2',
             text='This is a test question 2',
             options='["option3", "option4"]',
-            correct_answer='option3'
+            correct_answer='option3',
         )
 
         questions_repository_impl.register(model=question1)
