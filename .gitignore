@@ -128,3 +128,6 @@ dmypy.json
 cython_debug/
 
 .vscode
+
+test_db.*
+dev_database.*

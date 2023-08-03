@@ -598,6 +598,20 @@ Werkzeug = ">=0.7"
 docs = ["Sphinx", "sphinx-rtd-theme"]
 
 [[package]]
+name = "python-dotenv"
+version = "1.0.0"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "python-dotenv-1.0.0.tar.gz", hash = "sha256:a8df96034aae6d2d50a4ebe8216326c61c3eb64836776504fcca410e5937a3ba"},
+    {file = "python_dotenv-1.0.0-py3-none-any.whl", hash = "sha256:f5971a9226b701070a4bf2c38c89e5a3f0d64de8debda981d1db98583009122a"},
+]
+
+[package.extras]
+cli = ["click (>=5.0)"]
+
+[[package]]
 name = "sqlalchemy"
 version = "2.0.19"
 description = "Database Abstraction Library"
@@ -676,6 +690,20 @@ pymysql = ["pymysql"]
 sqlcipher = ["sqlcipher3-binary"]
 
 [[package]]
+name = "sqlalchemy-json"
+version = "0.6.0"
+description = "JSON type with nested change tracking for SQLAlchemy"
+optional = false
+python-versions = ">= 3.6"
+files = [
+    {file = "sqlalchemy-json-0.6.0.tar.gz", hash = "sha256:94785325716f0649ec6f4d0304ce8803a5bf25ff8aa2d998ce6b6334192f7448"},
+    {file = "sqlalchemy_json-0.6.0-py3-none-any.whl", hash = "sha256:06f124c093368903859367c7ab22416c4428e90c09ae14def8391f06a2373c1f"},
+]
+
+[package.dependencies]
+sqlalchemy = ">=0.7"
+
+[[package]]
 name = "tomli"
 version = "2.0.1"
 description = "A lil' TOML parser"
@@ -717,4 +745,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "fb5c37dd95d5d5ec2c9ccacae72629255f92f673707403157ad2194ee4e457dd"
+content-hash = "19ff0963cd2ff52da9b7c9ec6d7408b6f9c5f38a67df18a21b768fc873edeb49"
