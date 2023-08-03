@@ -1,9 +1,14 @@
-class QuestionModel:
-    id: str
-    theme: str
-    text: str
-    options: list
-    correct_answer: str
+from tokenize import String
+from sqlalchemy import ARRAY, Column, Text
+from src.infrastructure.adapters.database import Model
+
+
+class QuestionModel(Model):
+    id: str = Column(String(36), primary_key=True)
+    theme: str = Column(String(100), nullable=False)
+    text: str = Column(Text(), nullable=False)
+    options: list = Column(ARRAY(Text()), nullable=False)
+    correct_answer: str = Column(Text(), nullable=False)
 
     def __init__(
         self,
