@@ -5,7 +5,7 @@ from src.infrastructure.models.question_model import QuestionModel
 
 class QuestionsRepositoryInterface(ABC):
     @abstractmethod
-    def register(self, model) -> None:
+    def register(self, model: QuestionModel) -> None:
         pass
 
     @abstractmethod
