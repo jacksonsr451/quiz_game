@@ -1,6 +1,7 @@
 from flask import Flask
 
-from src.infrastructure.adapters.database import db
+from src import interfaces
+from src.infrastructure.adapters import database
 
 
 def start_app() -> Flask:
@@ -10,6 +11,7 @@ def start_app() -> Flask:
 
 def create_app() -> Flask:
     app = start_app()
-    db.init_app(app)
+    database.init_app(app)
 
+    interfaces.init_blueprints(app)
     return app
