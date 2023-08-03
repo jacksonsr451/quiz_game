@@ -1,14 +1,16 @@
-from tokenize import String
-from sqlalchemy import ARRAY, Column, Text
-from src.infrastructure.adapters.database import Model
+from sqlalchemy import JSON, Column, String, Text
+
+from src.infrastructure.adapters.database import Base
 
 
-class QuestionModel(Model):
-    id: str = Column(String(36), primary_key=True)
-    theme: str = Column(String(100), nullable=False)
-    text: str = Column(Text(), nullable=False)
-    options: list = Column(ARRAY(Text()), nullable=False)
-    correct_answer: str = Column(Text(), nullable=False)
+class QuestionModel(Base):
+    __tablename__ = 'questions'
+
+    id = Column(String(36), primary_key=True)
+    theme = Column(String, nullable=False)
+    text = Column(String, nullable=False)
+    options = Column(JSON, nullable=False)
+    correct_answer = Column(String, nullable=False)
 
     def __init__(
         self,
