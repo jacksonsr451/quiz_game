@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 from src.application.dtos.question_dto import QuestionDTO
 
 
-class QuestionsServicesInterface(ABC()):
+class QuestionsServicesInterface(ABC):
     @abstractmethod
     def register_a_new_question(self, data: QuestionDTO) -> None:
         pass
