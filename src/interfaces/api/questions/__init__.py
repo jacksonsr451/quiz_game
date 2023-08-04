@@ -1,5 +1,8 @@
 from flask import Blueprint
-from src.interfaces.api.questions.questions_controller import QuestionsController
+
+from src.interfaces.api.questions.questions_controller import (
+    QuestionsController,
+)
 
 
 def init_routes(api_bp: Blueprint):
